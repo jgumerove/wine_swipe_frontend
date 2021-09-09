@@ -1,5 +1,4 @@
-const api = "http://localhost:3000/wines"
+const api = new ApiService("http://localhost:3000")
 
-fetch(api)
-.then(response => response.json())
-.then(data => console.log(data));
+console.log(api.getWines())
+
