@@ -8,3 +8,30 @@ body {
     text-align: center;
 }
 
+#card-container-list{
+    color: red;
+    font-style: italic;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .but-nope, .but-yay {
+    display:inline-block;
+  }
+
+  
+
+  h3 {
+      text-align: center;
+  }
+
+  h5 {
+      text-align: center;
+  }
+
+
