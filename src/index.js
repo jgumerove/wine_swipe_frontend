@@ -1,4 +1,5 @@
 const api = new ApiService("http://localhost:3000")
 
-console.log(api.getWines())
+api.getWines()
+.then(wines => console.log(wines))
 
