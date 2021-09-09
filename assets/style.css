@@ -2,3 +2,8 @@
 body {
     background-color: goldenrod;
 }
+
+.title {
+    color: black;
+    text-align: center;
+}
