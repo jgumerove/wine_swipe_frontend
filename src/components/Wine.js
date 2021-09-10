@@ -1,10 +1,7 @@
 class Wine {
 
     constructor (wineObj) {
-        this.id = wineObj.id
-        this.name = wineObj.name
-        this.category = wineObj.category
-        this.image = wineObj.image
+        this.wineObj = wineObj   
     }
 
     static createWines = () => {
