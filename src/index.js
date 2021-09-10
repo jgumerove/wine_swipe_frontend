@@ -6,7 +6,7 @@ const api = new ApiService("http://localhost:3000")
 function renderWines() {
 api.getWines()
 .then(wines => {
-    wines.forEach(wine => {
+    wines.forEach(wine => { //passing in each wine object
         const wineMarkup = `
         <div class="card-unswiped" data-id=${wine.id}>
             <h3>${wine.name}</h3>
@@ -24,4 +24,5 @@ api.getWines()
 }
 
 renderWines()
+Wine.createWines()
 
