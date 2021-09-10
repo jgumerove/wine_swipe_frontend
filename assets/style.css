@@ -44,6 +44,10 @@ img {
     
 } */
 
+body {
+    background-color: #D2B48C;
+}
+
 .card-unswiped {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px; /* 5px rounded corners */
@@ -51,4 +55,13 @@ img {
     padding: 20px;
     border: 1px solid #c9c9c9;
     color: black;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+    font-style: italic;
 }
