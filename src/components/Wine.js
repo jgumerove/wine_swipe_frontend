@@ -1,7 +1,7 @@
 class Wine {
 
     constructor (wineObj) {
-        this.wineObj = wineObj   
+        this.WineObj = wineObj  
     }
 
     static createWines = () => {
@@ -25,6 +25,7 @@ class Wine {
 
     }
 
+    
 
 }
 
