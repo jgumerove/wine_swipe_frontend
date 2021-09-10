@@ -65,3 +65,7 @@ body {
     text-align: center;
     font-style: italic;
 }
+
+.card-unswiped:hover {
+    cursor: pointer;
+}
