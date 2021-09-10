@@ -1,4 +1,4 @@
-  
+/*   
 body {
     background-color: goldenrod;
 }
@@ -12,6 +12,7 @@ body {
     font-style: italic;
     text-align: center;
 }
+
 
 img {
     display: block;
@@ -37,4 +38,10 @@ img {
     list-style-type: none;
 }
 
+/* .card {
 
+    position: absolute;
+    
+} */
+
+ */

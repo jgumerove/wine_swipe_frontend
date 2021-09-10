@@ -1,5 +1,9 @@
 const api = new ApiService("http://localhost:3000")
 
+
+
+
+function renderWines() {
 api.getWines()
 .then(wines => {
     wines.forEach(wine => {
@@ -19,4 +23,7 @@ api.getWines()
         document.querySelector("#card-container-list").innerHTML += wineMarkup
     })
 })
+}
+
+renderWines()
 
