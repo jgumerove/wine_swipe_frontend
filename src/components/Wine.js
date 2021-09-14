@@ -9,8 +9,8 @@ class Wine {
 
     }
 
-    renderWine = () => {
-        debugger
+    renderWine() {
+        return (
         `
         <div class="card-unswiped" data-id=${this.id}>
         <h3>${this.name}</h3>
@@ -19,8 +19,9 @@ class Wine {
             <br>
             <button class="yes-like">X</button>
             <button class="no-dislike">✔</button>
-            </div>
-            `
+        </div>
+
+            `)
         }
 
 }
