@@ -5,10 +5,14 @@ class Wine {
         this.name = data.name
         this.image = data.image
         this.category = data.category
+        Wine.all.push(this)
+        debugger
 
     }
 
 }
+
+Wine.all = []
 
 
 

@@ -6,7 +6,6 @@ const api = new ApiService("http://localhost:3000")
         api.getWines()
         .then(wines => {
             wines.forEach(wine => {
-                debugger
                 let newWine = new Wine(wine)
                 renderWine(wine)
             })
