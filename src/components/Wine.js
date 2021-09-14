@@ -25,7 +25,7 @@ class Wine {
         };
 
 
-        static createWines = () => { 
+  static createWines = () => { 
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {
@@ -40,28 +40,23 @@ class Wine {
         wineCard.addEventListener("click", (e) => {
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
                 const changeClass = e.target.closest(".card-unswiped")
-                changeClass.className = "card-swiped"
+                changeClass.className = "card-swiped-liked"
                 document.getElementById("card-container-list-swiped").appendChild(changeClass)
+            }
+            if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".no-dislike")) {
+                const changeClass = e.target.closest(".card-unswiped")
+                changeClass.className = "card-swiped-disliked"
+                document.getElementById("card-container-list-swiped").appendChild(changeClass)
+              }
             }    
-        })
+        );
+        
     };
 
 }
 
 Wine.all = []
-//work on adding the below as methods in class 
-// function addEventListeners () {
-//     const wineCard = document.getElementById("card-container-list-unswiped")
-//     wineCard.addEventListener("click", likeWine)
-// }
 
-// function likeWine(e) {
-//     if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
-//         const changeClass = e.target.closest(".card-unswiped")
-//         changeClass.className = "card-swiped"
-//         document.getElementById("card-container-list-swiped").appendChild(changeClass)
-//     }
-// }
 
 
 

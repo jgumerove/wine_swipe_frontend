@@ -1,48 +1,5 @@
-/*   
-body {
-    background-color: goldenrod;
-}
-
-.title {
-    color: black;
-    text-align: center;
-}
-
-#card-container-list{
-    font-style: italic;
-    text-align: center;
-}
 
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .but-nope, .but-yay {
-    display:inline-block;
-  }
-
-  
-
-  h3 {
-      text-align: center;
-  }
-
-  h5 {
-      text-align: center;
-  }
-
-  li {
-    list-style-type: none;
-}
-
-/* .card {
-
-    position: absolute;
-    
-} */
 
 body {
     background-color: #D2B48C;
@@ -59,13 +16,19 @@ body {
     background-color: white;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 
-.card-swiped {
+
+.card-swiped-liked {
     display: none;
 }
+
+.card-swiped-disliked {
+    display: none;
+}
+
 
 .title {
     text-align: center;
@@ -77,6 +40,3 @@ body {
 }
 
 
-/* .card-swiped {
-    display: none
-} */
