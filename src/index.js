@@ -35,7 +35,10 @@ function renderWine(wine) {
 
     function likeWine(e) {
         if (e.target.tagName == "BUTTON") {
-            const changeClass = e.target.closest(".card-unswiped").remove(".card-unswiped").add(".card-swiped")
+            const changeClass = e.target.closest(".card-unswiped")
+            changeClass.remove(".card-unswiped")
+            changeClass.classList.add("card-swiped")
+            document.getElementById("card-container-list-swiped").appendChild(changeClass)
         }
     }
     
