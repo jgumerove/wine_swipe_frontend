@@ -1,19 +1,6 @@
 const api = new ApiService("http://localhost:3000")
 
-    
-//create all the wines below
-    function createWines () { 
-        api.getWines()
-        .then(wines => {
-            wines.forEach(wine => {
-                const newWine = new Wine(wine)
-                document.querySelector("#card-container-list-unswiped").innerHTML += newWine.renderWine()
-            })
-    })
-    
-}
 
-//render a specific wine 
 
     
     function addEventListeners () {
@@ -31,7 +18,7 @@ const api = new ApiService("http://localhost:3000")
     
     //call the function above 
     //note the renderWine function is in the createWines function 
-    createWines()
+    Wine.createWines()
     
     
     
