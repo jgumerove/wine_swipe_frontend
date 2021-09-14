@@ -31,11 +31,12 @@ class Wine {
                 wines.forEach(wine => {
                     const newWine = new Wine(wine)
                     document.querySelector("#card-container-list-unswiped").innerHTML += newWine.renderWineCard()
+                    newWine.addEventListeners()
                 })
         })
     };
 
-    static addEventListeners = () => {
+    addEventListeners = () => {
         const wineCard = document.getElementById("card-container-list-unswiped")
         wineCard.addEventListener("click", (e) => {
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
