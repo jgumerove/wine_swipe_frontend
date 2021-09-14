@@ -6,6 +6,8 @@ const api = new ApiService("http://localhost:3000")
         api.getWines()
         .then(wines => {
             wines.forEach(wine => {
+                debugger
+                let newWine = new Wine(wine)
                 renderWine(wine)
             })
     })
@@ -33,7 +35,7 @@ function renderWine(wine) {
     }
 
     function likeWine(e) {
-        if (e.target.tagName == "BUTTON") {
+        if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
             const changeClass = e.target.closest(".card-unswiped")
             changeClass.className = "card-swiped"
             document.getElementById("card-container-list-swiped").appendChild(changeClass)
