@@ -69,3 +69,8 @@ body {
 .card-unswiped:hover {
     cursor: pointer;
 }
+
+
+/* .card-swiped {
+    display: none
+} */
