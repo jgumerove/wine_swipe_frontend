@@ -40,13 +40,22 @@ class Wine {
         wineCard.addEventListener("click", (e) => {
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
                 const changeClass = e.target.closest(".card-unswiped")
-                changeClass.className = "card-swiped-liked"
-                document.getElementById("card-container-list-swiped").appendChild(changeClass)
+                changeClass.style.animation ="rightnewmove 2s 1"
+                setTimeout(() => {
+                    changeClass.className = "card-swiped-liked"
+                    document.getElementById("card-container-list-swiped").appendChild(changeClass)
+                }, 1000)
+                //changeClass.className = "card-swiped-liked"
+                //document.getElementById("card-container-list-swiped").appendChild(changeClass)
             }
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".no-dislike")) {
                 const changeClass = e.target.closest(".card-unswiped")
+                changeClass.style.animation ="leftnewmove 2s 1"
+                setTimeout(() => {
                 changeClass.className = "card-swiped-disliked"
                 document.getElementById("card-container-list-swiped").appendChild(changeClass)
+                }, 1000)
+                
               }
             }    
         );

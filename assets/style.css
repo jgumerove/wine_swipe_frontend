@@ -39,4 +39,26 @@ body {
     cursor: pointer;
 }
 
+@keyframes leftnewmove {
+    from {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotate(-40deg) translateY(-80px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rightnewmove {
+    from {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotate(40deg) translateY(-80px);
+      opacity: 0;
+    }
+  }
+
 
