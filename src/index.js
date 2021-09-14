@@ -23,7 +23,6 @@ function renderWine(wine) {
         <button class="yes-like">X</button>
         <button class="no-dislike">✔</button>
         </div>
-        <br><br>
         `
         document.querySelector("#card-container-list-unswiped").innerHTML += wineMarkup
     }
@@ -36,8 +35,7 @@ function renderWine(wine) {
     function likeWine(e) {
         if (e.target.tagName == "BUTTON") {
             const changeClass = e.target.closest(".card-unswiped")
-            changeClass.remove(".card-unswiped")
-            changeClass.classList.add("card-swiped")
+            changeClass.className = "card-swiped"
             document.getElementById("card-container-list-swiped").appendChild(changeClass)
         }
     }
