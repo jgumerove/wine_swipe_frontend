@@ -21,7 +21,12 @@ class Wine {
             `)
         };
 //to create all wines
-  static createWines = () => { 
+  static createWines = () => {
+    //   const main = document.getElementById("main")
+    //   const addWine = document.createElement("button") 
+    //   addWine.className = "new-wine-button"
+    //   addWine.innerText = "Add a New Wine"
+    //   main.appendChild(addWine)
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {

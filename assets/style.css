@@ -1,11 +1,6 @@
-
-
-
 body {
     background-color: #D2B48C;
 }
-
-
 
 .card-unswiped {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -16,13 +11,8 @@ body {
     color: black;
     background-color: white;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     display: inline-table;
 }
-
-
-
 
 .card-swiped-liked {
     display: none;
@@ -32,7 +22,6 @@ body {
     display: none;
 }
 
-
 .title {
     text-align: center;
     font-family: Trattatello, fantasy;
@@ -41,6 +30,12 @@ body {
 
 .card-unswiped:hover {
     cursor: pointer;
+}
+
+.add-new-wine {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /* https://christianheilmann.com/2015/09/06/tinderesque-building-a-tinder-like-interface-with-css-animations-and-vanilla-js-justcode */
@@ -68,6 +63,7 @@ body {
   }
 
   /* https://www.w3schools.com/howto/howto_css_modals.asp */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
