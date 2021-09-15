@@ -8,5 +8,8 @@ class Modal {
         this.modal.style.display = "block"
     }
 
-
+    close = () => {
+        this.modal.style.display = "none"
+    }
+    
 }
