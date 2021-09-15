@@ -25,6 +25,7 @@ class Wine {
 
         //to create all wines
         static createWines = () => {
+            document.querySelector("#card-container-list-unswiped").innerHTML = ""
             const addWine = document.querySelector(".add-new-wine")
             addWine.addEventListener("click", this.openWineModalForm)
             api.getWines()
@@ -90,7 +91,7 @@ class Wine {
         }
         api.addWine(newWine).then(wine => {
             new Wine(wine)
-            document.querySelector("#card-container-list-unswiped").innerHTML = ""
+            
             Wine.createWines()
         })
         e.target.reset()
