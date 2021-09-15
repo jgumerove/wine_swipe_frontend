@@ -61,8 +61,7 @@ class Wine {
 
    //opens form to add a new wine
     static openWineModelForm = () => {
-        modal.mainModal.innerHTML = ""
-        modal.mainModal.innerHTML += `
+       modal.mainModal.innerHTML = `
       <form>
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br>
