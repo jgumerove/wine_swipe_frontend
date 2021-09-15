@@ -1,21 +1,17 @@
 class Wine {
-
     constructor (data) {
-        this.id = data.id
-        this.name = data.name
-        this.image = data.image
-        this.category = data.category
+        this.data = data
         Wine.all.push(this)
-
     };
-
+//to create a specific wine
     renderWineCard = () => {
+        const { id, name, image, category} = this.data
         return (
         `
-        <div class="card-unswiped" data-id=${this.id}>
-        <h3>${this.name}</h3>
-        <h5>${this.category}</h5>
-            <img src=${this.image} width="200" height="250">
+        <div class="card-unswiped" data-id=${id}>
+        <h3>${name}</h3>
+        <h5>${category}</h5>
+            <img src=${image} width="200" height="250">
             <br>
             <button class="no-dislike" data-id=${this.id}>X</button>
             <button class="yes-like" data-id=${this.id}>✔</button>
@@ -23,8 +19,7 @@ class Wine {
 
             `)
         };
-
-
+//to create all wines
   static createWines = () => { 
             api.getWines()
             .then(wines => {
@@ -35,7 +30,7 @@ class Wine {
                 })
         })
     };
-
+//to add like & dislike functionality 
     addEventListeners = () => {
         const wineCard = document.getElementById("main")
         wineCard.addEventListener("click", (e) => {

@@ -35,6 +35,8 @@ body {
 
 .title {
     text-align: center;
+    font-family: Trattatello, fantasy;
+    color: white;
 }
 
 .card-unswiped:hover {
