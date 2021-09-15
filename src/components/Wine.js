@@ -72,8 +72,14 @@ class Wine {
         <input type="submit" value="Add a Wine"><br>
      </form>
        `
+       modal.mainModal.querySelector("form").addEventListener("submit", this.handleSubmit)
        modal.open()
     };
+
+    static handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("this form was submitted")
+    }
 
 }
 
