@@ -1,4 +1,8 @@
 class Modal {
+
+    constructor() {
+        this.addCloseEventListener()
+    }
      
     //grab the element
     get modalElement () {
@@ -11,6 +15,14 @@ class Modal {
     //use getter to close by changing display to none 
     close = () => {
         this.modalElement.style.display = "none"
+    }
+
+    addCloseEventListener = () => {
+        this.modalElement.addEventListener("click", (e) => {
+            if (e.target.classList.contains("close") || e.target.id == "myModal") {
+                console.log("close this thing")
+            }
+        })
     }
     
 }
