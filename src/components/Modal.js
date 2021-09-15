@@ -1,7 +1,7 @@
 class Modal {
 
-    get modal () {
-        document.querySelector("#myModal")
+    get modalElement () {
+        return document.querySelector("#myModal")
     }
 
     open = () => {
