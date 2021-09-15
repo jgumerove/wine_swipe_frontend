@@ -22,10 +22,10 @@ class Wine {
             `)
         };
 
-    //to create all wines
-    static createWines = () => {
-      const addWine = document.querySelector(".add-new-wine")
-      addWine.addEventListener("click", this.openWineModalForm)
+        //to create all wines
+        static createWines = () => {
+            const addWine = document.querySelector(".add-new-wine")
+            addWine.addEventListener("click", this.openWineModalForm)
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {
@@ -86,7 +86,13 @@ class Wine {
             category: e.target.category.value,
             image: e.target.image.value
         }
-        console.log(newWine)
+        api.addWine(newWine).then(wine => {
+            const addWineToDom = new Wine(wine)
+            document.querySelector("#card-container-list-unswiped").innerHTML = ""
+            Wine.createWines()
+            //document.querySelector("#card-container-list-unswiped").innerHTML += addWineToDom
+        })
+        e.target.reset()
     }
 
 }
