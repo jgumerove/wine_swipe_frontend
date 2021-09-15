@@ -3,25 +3,27 @@ class Wine {
     constructor (data) {
         this.data = data
         Wine.all.push(this)
-    };
-//to create a specific wine
-    renderWineCard = () => {
+      };
+
+        //to create a specific wine
+        renderWineCard = () => {
         const { id, name, image, category} = this.data
         return (
-        `
-        <div class="card-unswiped" data-id=${id}>
-        <h3>${name}</h3>
-        <h5>${category}</h5>
-            <img src=${image} width="200" height="250">
-            <br>
-            <button class="no-dislike" data-id=${id}>X</button>
-            <button class="yes-like" data-id=${id}>✔</button>
-        </div>
+            `
+            <div class="card-unswiped" data-id=${id}>
+            <h3>${name}</h3>
+            <h5>${category}</h5>
+                <img src=${image} width="200" height="250">
+                <br>
+                <button class="no-dislike" data-id=${id}>X</button>
+                <button class="yes-like" data-id=${id}>✔</button>
+            </div>
 
             `)
         };
-//to create all wines
-  static createWines = () => {
+
+    //to create all wines
+    static createWines = () => {
       const addWine = document.querySelector(".add-new-wine")
       addWine.addEventListener("click", this.openWineModalForm)
             api.getWines()
@@ -33,7 +35,8 @@ class Wine {
                 })
         })
     };
-//to add like & dislike functionality 
+
+    //to add like & dislike functionality 
     addEventListeners = () => {
         const wineCard = document.getElementById("main")
         wineCard.addEventListener("click", (e) => {
@@ -59,26 +62,31 @@ class Wine {
         
     };
 
-   //opens form to add a new wine
-    static openWineModalForm = () => {
-       modal.mainModal.innerHTML = `
-      <form>
-        <label for="fname">Name:</label><br>
-        <input type="text" name="name"><br>
-        <label for="category">Category:</label><br>
-        <input type="text" name="category"><br>
-        <label for="image">Image:</label><br>
-        <input type="text" name="image"><br>
-        <input type="submit" value="Add a Wine"><br>
-     </form>
-       `
-       modal.mainModal.querySelector("form").addEventListener("submit", this.handleSubmit)
-       modal.open()
-    };
+    //opens form to add a new wine
+        static openWineModalForm = () => {
+        modal.mainModal.innerHTML = `
+        <form>
+            <label for="fname">Name:</label><br>
+            <input type="text" name="name"><br>
+            <label for="category">Category:</label><br>
+            <input type="text" name="category"><br>
+            <label for="image">Image:</label><br>
+            <input type="text" name="image"><br>
+            <input type="submit" value="Add a Wine"><br>
+        </form>
+        `
+        modal.mainModal.querySelector("form").addEventListener("submit", this.handleSubmit)
+        modal.open()
+        };
 
     static handleSubmit = (e) => {
         e.preventDefault()
-        console.log("this form was submitted")
+        const newWine = {
+            name: e.target.name.value,
+            category: e.target.category.value,
+            image: e.target.image.value
+        }
+        console.log(newWine)
     }
 
 }
