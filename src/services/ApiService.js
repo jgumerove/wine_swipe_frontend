@@ -7,6 +7,7 @@ class ApiService {
     getWines = () => fetch(this.api + "/wines").then(res => res.json())
 
     addWine = (newWine) => {
+        newWine.user_id = user.id
         return fetch(this.api + "/wines", {
         method: 'POST', // or 'PUT'
         headers: {

@@ -8,6 +8,7 @@ document.querySelector("form").addEventListener("submit", handleLogin)
     
 function handleLogin(e) {
     e.preventDefault()
+    document.getElementById("login").innerHTML = ""
     api.findOrCreateUser(e.target.username.value).then(userInfo => {
         user = userInfo
         Wine.createWines()
