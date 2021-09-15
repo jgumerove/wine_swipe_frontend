@@ -23,7 +23,7 @@ class Wine {
 //to create all wines
   static createWines = () => {
       const addWine = document.querySelector(".add-new-wine")
-      addWine.addEventListener("click", this.openWineModelForm)
+      addWine.addEventListener("click", this.openWineModalForm)
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {
@@ -60,13 +60,16 @@ class Wine {
     };
 
    //opens form to add a new wine
-    static openWineModelForm = () => {
+    static openWineModalForm = () => {
        modal.mainModal.innerHTML = `
       <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
+        <label for="fname">Name:</label><br>
+        <input type="text" name="name"><br>
+        <label for="category">Category:</label><br>
+        <input type="text" name="category"><br>
+        <label for="image">Image:</label><br>
+        <input type="text" name="image"><br>
+        <input type="submit" value="Add a Wine"><br>
      </form>
        `
        modal.open()
