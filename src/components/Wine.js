@@ -7,10 +7,11 @@ class Wine {
 
         //to create a specific wine
         renderWineCard = () => {
-        const { id, name, image, category} = this.data
+        const { id, name, image, category, username} = this.data
         return (
             `
             <div class="card-unswiped" data-id=${id}>
+            <h3>Owner: ${username}</h3>
             <h3>${name}</h3>
             <h5>${category}</h5>
                 <img src=${image} width="200" height="250">
@@ -79,7 +80,7 @@ class Wine {
         modal.open()
         };
     
-    //add a new wine to page   
+    //add a new wine to page after form button pushed   
     static handleSubmit = (e) => {
         e.preventDefault()
         const newWine = {
