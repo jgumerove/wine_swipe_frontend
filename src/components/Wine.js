@@ -17,8 +17,8 @@ class Wine {
         <h5>${this.category}</h5>
             <img src=${this.image} width="200" height="250">
             <br>
-            <button class="no-dislike">X</button>
-            <button class="yes-like">✔</button>
+            <button class="no-dislike" data-id=${this.id}>X</button>
+            <button class="yes-like" data-id=${this.id}>✔</button>
         </div>
 
             `)
@@ -30,14 +30,14 @@ class Wine {
             .then(wines => {
                 wines.forEach(wine => {
                     const newWine = new Wine(wine)
-                    document.querySelector("#card-container-list-unswiped").innerHTML += newWine.renderWineCard()
                     newWine.addEventListeners()
+                    document.querySelector("#card-container-list-unswiped").insertAdjacentHTML('beforeend', newWine.renderWineCard())
                 })
         })
     };
 
     addEventListeners = () => {
-        const wineCard = document.getElementById("card-container-list-unswiped")
+        const wineCard = document.getElementById("main")
         wineCard.addEventListener("click", (e) => {
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
                 const changeClass = e.target.closest(".card-unswiped")
