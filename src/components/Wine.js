@@ -78,7 +78,8 @@ class Wine {
         modal.mainModal.querySelector("form").addEventListener("submit", this.handleSubmit)
         modal.open()
         };
-
+    
+    //add a new wine to page   
     static handleSubmit = (e) => {
         e.preventDefault()
         const newWine = {
@@ -87,10 +88,9 @@ class Wine {
             image: e.target.image.value
         }
         api.addWine(newWine).then(wine => {
-            const addWineToDom = new Wine(wine)
+            new Wine(wine)
             document.querySelector("#card-container-list-unswiped").innerHTML = ""
             Wine.createWines()
-            //document.querySelector("#card-container-list-unswiped").innerHTML += addWineToDom
         })
         e.target.reset()
     }
