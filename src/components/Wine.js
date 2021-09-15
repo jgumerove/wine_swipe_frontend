@@ -1,4 +1,5 @@
 class Wine {
+
     constructor (data) {
         this.data = data
         Wine.all.push(this)
