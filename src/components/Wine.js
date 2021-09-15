@@ -46,8 +46,6 @@ class Wine {
                     changeClass.className = "card-swiped-liked"
                     document.getElementById("card-container-list-swiped").appendChild(changeClass)
                 }, 1000)
-                //changeClass.className = "card-swiped-liked"
-                //document.getElementById("card-container-list-swiped").appendChild(changeClass)
             }
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".no-dislike")) {
                 const changeClass = e.target.closest(".card-unswiped")
