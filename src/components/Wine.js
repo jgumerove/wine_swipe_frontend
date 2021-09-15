@@ -14,8 +14,8 @@ class Wine {
         <h5>${category}</h5>
             <img src=${image} width="200" height="250">
             <br>
-            <button class="no-dislike" data-id=${this.id}>X</button>
-            <button class="yes-like" data-id=${this.id}>✔</button>
+            <button class="no-dislike" data-id=${id}>X</button>
+            <button class="yes-like" data-id=${id}>✔</button>
         </div>
 
             `)
@@ -23,12 +23,7 @@ class Wine {
 //to create all wines
   static createWines = () => {
       const addWine = document.querySelector(".add-new-wine")
-      addWine.addEventListener("click", modal.open)
-    //   const main = document.getElementById("main")
-    //   const addWine = document.createElement("button") 
-    //   addWine.className = "new-wine-button"
-    //   addWine.innerText = "Add a New Wine"
-    //   main.appendChild(addWine)
+      addWine.addEventListener("click", this.openWineModelForm)
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {
@@ -62,6 +57,19 @@ class Wine {
             }    
         );
         
+    };
+
+   //opens form to add a new wine
+    static openWineModelForm = () => {
+        modal.mainModal.innerHTML += `
+      <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+     </form>
+       `
+       modal.open()
     };
 
 }
