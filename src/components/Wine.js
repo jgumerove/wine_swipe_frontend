@@ -22,6 +22,8 @@ class Wine {
         };
 //to create all wines
   static createWines = () => {
+      const addWine = document.querySelector(".add-new-wine")
+      addWine.addEventListener("click", modal.open)
     //   const main = document.getElementById("main")
     //   const addWine = document.createElement("button") 
     //   addWine.className = "new-wine-button"
