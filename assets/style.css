@@ -110,4 +110,12 @@ body {
   display: none;
 }
 
+button {
+  background-color: green;
+}
+
+.no-dislike {
+  background-color: red;
+}
+
 
