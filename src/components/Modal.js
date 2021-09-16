@@ -2,6 +2,7 @@ class Modal {
 
     constructor() {
         this.addCloseEventListener()
+        this.addCloseLikesEventListener()
     }
      
     //grab the element
@@ -47,5 +48,13 @@ class Modal {
             }
         })
     };
+
+    addCloseLikesEventListener = () => {
+        this.modalElementLikes.addEventListener("click", (e) => {
+            if (e.target.classList.contains("close") || e.target.id == "myModalLikes") {
+                this.closeLikes()
+            }
+        })
+    }
     
 }

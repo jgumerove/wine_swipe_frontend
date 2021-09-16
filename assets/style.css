@@ -23,7 +23,7 @@ body {
 }
 
 .card-swiped-liked {
-    display: none;
+    display: block;
 }
 
 .card-swiped-disliked {

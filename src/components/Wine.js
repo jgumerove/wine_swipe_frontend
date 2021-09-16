@@ -51,7 +51,8 @@ class Wine {
                 changeClass.style.animation ="rightnewmove 2s 1"
                 setTimeout(() => {
                     changeClass.className = "card-swiped-liked"
-                    document.getElementById("card-container-list-swiped").appendChild(changeClass)
+                    changeClass.style.animation = null
+                    document.getElementById("card-container-list-swiped-liked").appendChild(changeClass)
                 }, 1000)
             }
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".no-dislike")) {
