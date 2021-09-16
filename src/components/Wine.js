@@ -68,6 +68,7 @@ class Wine {
         );
         
     };
+    
 
     //opens form to add a new wine
         static openWineModalForm = () => {

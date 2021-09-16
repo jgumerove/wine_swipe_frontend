@@ -19,10 +19,6 @@ class Modal {
         return document.getElementById("modal-main")
     };
 
-    get mainModalLikes () {
-        return document.getElementById("modal-main-likes")
-    }
-
     //use the getter to open element by displaying in block
     open = () => {
         this.modalElement.style.display = "block"
