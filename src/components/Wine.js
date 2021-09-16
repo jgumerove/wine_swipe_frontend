@@ -29,6 +29,8 @@ class Wine {
             document.getElementById("view-likes").style.display = "block"
             document.querySelector("#card-container-list-unswiped").innerHTML = ""
             const addWine = document.querySelector(".add-new-wine")
+            const viewLikes = document.querySelector(".view-liked-wines")
+            console.log(viewLikes)
             addWine.addEventListener("click", this.openWineModalForm)
             api.getWines()
             .then(wines => {
