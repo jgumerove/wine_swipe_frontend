@@ -32,6 +32,10 @@ class Modal {
         this.modalElement.style.display = "none"
     }
 
+    closeLikes = () => {
+        this.modalElementLikes.style.display = "none"
+    }
+
     addCloseEventListener = () => {
         this.modalElement.addEventListener("click", (e) => {
             if (e.target.classList.contains("close") || e.target.id == "myModal") {
