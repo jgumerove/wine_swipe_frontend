@@ -11,7 +11,12 @@ body {
     color: black;
     background-color: white;
     text-align: center;
-    display: inline-table;
+    /* display: inline-table; */
+    display: none;
+}
+
+.card-unswiped:first-of-type {
+  display: inline-table;
 }
 
 .card-swiped-liked {
