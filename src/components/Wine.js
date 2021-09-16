@@ -11,9 +11,9 @@ class Wine {
         return (
             `
             <div class="card-unswiped" data-id=${id}>
-            <h3>Owner: ${username}</h3>
-            <h3>${name}</h3>
-            <h5>${category}</h5>
+            <h5>Seller: ${username}</h5>
+            <h5>Title: ${name}</h5>
+            <h5>Type: ${category}</h5>
                 <img src=${image} width="200" height="250">
                 <br>
                 <button class="no-dislike" data-id=${id}>X</button>
