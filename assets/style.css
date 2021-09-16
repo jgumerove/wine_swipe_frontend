@@ -114,6 +114,11 @@ body {
   margin-right: auto;
 }
 
+#view-likes {
+  display: none;
+  margin-left: auto;
+}
+
 button {
   background-color: green;
 }

@@ -26,6 +26,7 @@ class Wine {
         //to create all wines
         static createWines = () => {
             document.getElementById("add-new").style.display = "block"
+            document.getElementById("view-likes").style.display = "block"
             document.querySelector("#card-container-list-unswiped").innerHTML = ""
             const addWine = document.querySelector(".add-new-wine")
             addWine.addEventListener("click", this.openWineModalForm)
