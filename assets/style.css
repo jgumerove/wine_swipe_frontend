@@ -101,4 +101,8 @@ body {
   cursor: pointer;
 }
 
+#add-new {
+  display: none;
+}
+
 
