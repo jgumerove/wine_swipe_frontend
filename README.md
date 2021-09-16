@@ -12,12 +12,17 @@ WineSwipe is a Single-Page-Application(SPA) created with Object-Oriented JavaScr
 
 **$rails s** 
 
-Due to the nature of an SPA -- any refresh will require a user to sign-again (HTTP state is not preserved)
+Due to the nature of an SPA -- any refresh will require a user to sign-again (HTTP state is not preserved). The back-end repository is provided in the following section.
 
-## Contributor Guide
+## RAILS API 
+
+The following repository must be used in conjuction with this front-end repository in order to use the application: 
+[(https://github.com/jgumerove/wine_swipe_frontend)]
+
+## CONTRIBUTOR GUIDE
 
 Bug reports and questions are welcomed at the following [(https://github.com/jgumerove)]
 
-## License 
+## LICENSE 
 
 Licensed under the [MIT License](LICENSE)
