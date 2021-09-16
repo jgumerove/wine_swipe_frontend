@@ -30,8 +30,8 @@ class Wine {
             document.querySelector("#card-container-list-unswiped").innerHTML = ""
             const addWine = document.querySelector(".add-new-wine")
             const viewLikes = document.querySelector(".view-liked-wines")
-            console.log(viewLikes)
             addWine.addEventListener("click", this.openWineModalForm)
+            viewLikes.addEventListener("click", modal.openLikes)
             api.getWines()
             .then(wines => {
                 wines.forEach(wine => {
