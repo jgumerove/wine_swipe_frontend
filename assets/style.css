@@ -16,7 +16,9 @@ body {
 }
 
 .card-unswiped:first-of-type {
-  display: inline-table;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-swiped-liked {
@@ -108,6 +110,8 @@ body {
 
 #add-new {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
