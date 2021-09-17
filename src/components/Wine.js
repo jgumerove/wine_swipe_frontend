@@ -37,7 +37,8 @@ class Wine {
                 wines.forEach(wine => {
                     const newWine = new Wine(wine)
                     newWine.addEventListeners()
-                    document.querySelector("#card-container-list-unswiped").insertAdjacentHTML('beforeend', newWine.renderWineCard())
+                    document.querySelector("#card-container-list-unswiped").
+                    insertAdjacentHTML('beforeend', newWine.renderWineCard())
                 })
         })
     };
@@ -48,7 +49,7 @@ class Wine {
         wineCard.addEventListener("click", (e) => {
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".yes-like")) {
                 const changeClass = e.target.closest(".card-unswiped")
-                changeClass.style.animation ="rightnewmove 2s 1"
+                changeClass.style.animation ="rightnewmove 1s 1"
                 setTimeout(() => {
                     changeClass.className = "card-swiped-liked"
                     changeClass.style.animation = null
@@ -57,7 +58,7 @@ class Wine {
             }
             if (e.target.tagName == "BUTTON" && e.target == document.querySelector(".no-dislike")) {
                 const changeClass = e.target.closest(".card-unswiped")
-                changeClass.style.animation ="leftnewmove 2s 1"
+                changeClass.style.animation ="leftnewmove 1s 1"
                 setTimeout(() => {
                 changeClass.className = "card-swiped-disliked"
                 document.getElementById("card-container-list-swiped").appendChild(changeClass)
@@ -65,8 +66,7 @@ class Wine {
                 
               }
             }    
-        );
-        
+        ); 
     };
     
 
