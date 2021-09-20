@@ -75,7 +75,7 @@ class Wine {
         static openWineModalForm = () => {
         modal.mainModal.innerHTML = `
         <form>
-            <label for="fname">Name:</label><br>
+            <label for="name">Name:</label><br>
             <input type="text" name="name"><br>
             <label for="category">Category:</label><br>
             <input type="text" name="category"><br>
@@ -96,6 +96,7 @@ class Wine {
         const newWine = {
             name: e.target.name.value,
             category: e.target.category.value,
+            price: e.target.price.value,
             image: e.target.image.value
         }
         api.addWine(newWine).then(wine => {
