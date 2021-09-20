@@ -96,9 +96,10 @@ class Wine {
             image: e.target.image.value
         }
         api.addWine(newWine).then(wine => {
-            new Wine(wine)
-            
-            Wine.createWines()
+            const wineCard = new Wine(wine)
+            wineCard.addEventListeners()
+            document.querySelector("#card-container-list-unswiped").
+            insertAdjacentHTML('beforeend', wineCard.renderWineCard())
         })
         e.target.reset()
     }
