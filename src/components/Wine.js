@@ -79,6 +79,8 @@ class Wine {
             <input type="text" name="name"><br>
             <label for="category">Category:</label><br>
             <input type="text" name="category"><br>
+            <label for="price">Price:</label><br>
+            <input type="text" name="price"><br>
             <label for="image">Image:</label><br>
             <input type="text" name="image"><br>
             <input type="submit" value="Add a Wine"><br>
