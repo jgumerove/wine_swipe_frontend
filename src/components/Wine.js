@@ -7,13 +7,14 @@ class Wine {
 
         //to create a specific wine
         renderWineCard = () => {
-        const { id, name, image, category, username} = this.data
+        const { id, name, image, category, username, price} = this.data
         return (
             `
             <div class="card-unswiped" data-id=${id}>
             <h5>Seller: ${username}</h5>
             <h5>Title: ${name}</h5>
             <h5>Type: ${category}</h5>
+            <h5>Price: $${price}</h5>
                 <img src=${image} width="200" height="250">
                 <br>
                 <button class="no-dislike" data-id=${id}>X</button>
