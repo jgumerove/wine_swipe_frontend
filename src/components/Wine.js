@@ -109,7 +109,6 @@ class Wine {
         }
         api.addWine(newWine).then(wine => {
             const wineCard = new Wine(wine)
-            wineCard.addEventListeners()
             document.querySelector("#card-container-list-unswiped").
             insertAdjacentHTML('beforeend', wineCard.renderWineCard())
         })
