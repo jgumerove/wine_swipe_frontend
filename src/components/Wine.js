@@ -53,9 +53,7 @@ class Wine {
                 const changeClass = e.target.closest(".card-unswiped")
                 changeClass.style.animation ="rightnewmove 1s 1"
                 setTimeout(() => {
-                    this.likeCount += 1
-                    let countLikes = document.querySelector(".view-liked-wines")
-                    countLikes.innerHTML = `View Liked Wines (${this.likeCount})`
+                    this.increaseLikeCount()
                     changeClass.className = "card-swiped-liked"
                     changeClass.style.animation = null
                     document.getElementById("card-container-list-swiped-liked").appendChild(changeClass)
@@ -73,8 +71,14 @@ class Wine {
             }    
         ); 
     };
-    
 
+   //to increase the amount of likes displayed
+    increaseLikeCount() {
+        this.likeCount += 1
+        let countLikes = document.querySelector(".view-liked-wines")
+        countLikes.innerHTML = `View Liked Wines (${this.likeCount})`
+    };
+    
     //opens form to add a new wine
         static openWineModalForm = () => {
         modal.mainModal.innerHTML = `
