@@ -2,6 +2,7 @@ class Wine {
 
     constructor (data) {
         this.data = data
+        this.likeCount = 0
         Wine.all.push(this)
       };
 
@@ -52,6 +53,9 @@ class Wine {
                 const changeClass = e.target.closest(".card-unswiped")
                 changeClass.style.animation ="rightnewmove 1s 1"
                 setTimeout(() => {
+                    this.likeCount += 1
+                    let countLikes = document.querySelector(".view-liked-wines")
+                    countLikes.innerHTML = `View Liked Wines (${this.likeCount})`
                     changeClass.className = "card-swiped-liked"
                     changeClass.style.animation = null
                     document.getElementById("card-container-list-swiped-liked").appendChild(changeClass)
