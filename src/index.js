@@ -3,7 +3,6 @@ const modal = new Modal()
 let user 
     
     
-//Wine.createWines()
 document.querySelector("form").addEventListener("submit", handleLogin)
     
 function handleLogin(e) {
